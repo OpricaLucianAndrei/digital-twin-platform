@@ -1,6 +1,13 @@
 {
   "name": "@digital-twin-platform-project/ui-layout",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Industrial Digital Twin UI Layout library",
+  "keywords": [
+    "angular",
+    "digital-twin",
+    "industrial",
+    "iot"
+  ],
   "peerDependencies": {
     "@angular/common": "^21.1.0",
     "@angular/core": "^21.1.0"
