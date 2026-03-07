@@ -13,8 +13,24 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@digital-twin-platform-project/core": ["libs/core/src/index.ts"],
+      "@digital-twin-platform-project/data-access": [
+        "libs/data-access/src/index.ts"
+      ],
+      "@digital-twin-platform-project/models": ["libs/models/src/index.ts"],
+      "@digital-twin-platform-project/ui": ["libs/ui/components/ui/src/index.ts"],
+      "@digital-twin-platform-project/ui-layout": ["libs/ui/layout/ui-layout/src/index.ts"],
+      "@digital-twin-platform-project/visualization": [
+        "libs/visualization/src/index.ts"
+      ],
+      "@digital-twin-platform-project/utils": ["libs/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
