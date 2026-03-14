@@ -24,12 +24,20 @@
         "libs/data-access/src/index.ts"
       ],
       "@digital-twin-platform-project/models": ["libs/models/src/index.ts"],
-      "@digital-twin-platform-project/ui": ["libs/ui/components/ui/src/index.ts"],
-      "@digital-twin-platform-project/ui-layout": ["libs/ui/layout/ui-layout/src/index.ts"],
+      "@digital-twin-platform-project/ui": [
+        "libs/ui/components/ui/src/index.ts"
+      ],
+      "@digital-twin-platform-project/ui-layout": [
+        "libs/ui/layout/ui-layout/src/index.ts"
+      ],
       "@digital-twin-platform-project/visualization": [
         "libs/visualization/src/index.ts"
       ],
-      "@digital-twin-platform-project/utils": ["libs/utils/src/index.ts"]
+      "@digital-twin-platform-project/utils": ["libs/utils/src/index.ts"],
+      "@dt-platform/quantum-models": ["libs/quantum-models/src/index.ts"],
+      "@dt-platform/quantum-data-access": [
+        "libs/quantum-data-access/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,8 +1,9 @@
 {
   "name": "digital-twin-platform-e2e",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/e2e/digital-twin-platform-e2e",
   "projectType": "application",
-  "sourceRoot": "apps/digital-twin-platform-e2e/src",
+  "sourceRoot": "apps/e2e/digital-twin-platform-e2e/src",
   "implicitDependencies": ["digital-twin-platform"],
   "// targets": "to see all targets run: nx show project digital-twin-platform-e2e --web",
   "targets": {}

@@ -7,8 +7,51 @@
   "tags": [],
   "targets": {
     "build": {
+      "executor": "@angular-architects/native-federation:build",
+      "options": {},
+      "configurations": {
+        "production": {
+          "target": "digital-twin:esbuild:production"
+        },
+        "development": {
+          "target": "digital-twin:esbuild:development",
+          "dev": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-architects/native-federation:build",
+      "options": {
+        "target": "digital-twin:serve-original:development",
+        "rebuildDelay": 500,
+        "dev": true,
+        "cacheExternalArtifacts": false,
+        "port": 0
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {}
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "digital-twin:build",
+        "port": 4200,
+        "staticFilePath": "dist/digital-twin/browser",
+        "spa": true
+      }
+    },
+    "esbuild": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/digital-twin",
         "browser": "apps/microfrontends/digital-twin/src/main.ts",
@@ -20,7 +63,12 @@
             "input": "apps/microfrontends/digital-twin/public"
           }
         ],
-        "styles": ["apps/microfrontends/digital-twin/src/styles.scss"]
+        "styles": [
+          "apps/microfrontends/digital-twin/src/styles.scss"
+        ],
+        "polyfills": [
+          "es-module-shims"
+        ]
       },
       "configurations": {
         "production": {
@@ -46,34 +94,20 @@
       },
       "defaultConfiguration": "production"
     },
-    "serve": {
+    "serve-original": {
       "continuous": true,
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "digital-twin:build:production"
+          "buildTarget": "digital-twin:esbuild:production"
         },
         "development": {
-          "buildTarget": "digital-twin:build:development"
+          "buildTarget": "digital-twin:esbuild:development"
         }
       },
-      "defaultConfiguration": "development"
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "test": {
-      "executor": "@angular/build:unit-test",
-      "options": {}
-    },
-    "serve-static": {
-      "continuous": true,
-      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "digital-twin:build",
-        "port": 4200,
-        "staticFilePath": "dist/digital-twin/browser",
-        "spa": true
+        "port": 4201
       }
     }
   }

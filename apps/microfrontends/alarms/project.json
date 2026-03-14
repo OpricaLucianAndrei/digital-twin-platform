@@ -7,8 +7,51 @@
   "tags": [],
   "targets": {
     "build": {
+      "executor": "@angular-architects/native-federation:build",
+      "options": {},
+      "configurations": {
+        "production": {
+          "target": "alarms:esbuild:production"
+        },
+        "development": {
+          "target": "alarms:esbuild:development",
+          "dev": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-architects/native-federation:build",
+      "options": {
+        "target": "alarms:serve-original:development",
+        "rebuildDelay": 500,
+        "dev": true,
+        "cacheExternalArtifacts": false,
+        "port": 0
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {}
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "alarms:build",
+        "port": 4200,
+        "staticFilePath": "dist/alarms/browser",
+        "spa": true
+      }
+    },
+    "esbuild": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/alarms",
         "browser": "apps/microfrontends/alarms/src/main.ts",
@@ -20,7 +63,12 @@
             "input": "apps/microfrontends/alarms/public"
           }
         ],
-        "styles": ["apps/microfrontends/alarms/src/styles.scss"]
+        "styles": [
+          "apps/microfrontends/alarms/src/styles.scss"
+        ],
+        "polyfills": [
+          "es-module-shims"
+        ]
       },
       "configurations": {
         "production": {
@@ -46,34 +94,20 @@
       },
       "defaultConfiguration": "production"
     },
-    "serve": {
+    "serve-original": {
       "continuous": true,
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "alarms:build:production"
+          "buildTarget": "alarms:esbuild:production"
         },
         "development": {
-          "buildTarget": "alarms:build:development"
+          "buildTarget": "alarms:esbuild:development"
         }
       },
-      "defaultConfiguration": "development"
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
-    "test": {
-      "executor": "@angular/build:unit-test",
-      "options": {}
-    },
-    "serve-static": {
-      "continuous": true,
-      "executor": "@nx/web:file-server",
+      "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "alarms:build",
-        "port": 4200,
-        "staticFilePath": "dist/alarms/browser",
-        "spa": true
+        "port": 4202
       }
     }
   }

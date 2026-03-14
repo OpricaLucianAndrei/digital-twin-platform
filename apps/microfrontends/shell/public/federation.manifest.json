@@ -1,0 +1,7 @@
+{
+  "digital-twin": "http://localhost:4201/remoteEntry.json",
+  "alarms": "http://localhost:4202/remoteEntry.json",
+  "analytics": "http://localhost:4203/remoteEntry.json",
+  "admin": "http://localhost:4204/remoteEntry.json",
+  "quantum": "http://localhost:4205/remoteEntry.json"
+}

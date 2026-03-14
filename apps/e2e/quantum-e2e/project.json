@@ -1,0 +1,10 @@
+{
+  "name": "quantum-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "root": "apps/e2e/quantum-e2e",
+  "sourceRoot": "apps/e2e/quantum-e2e/src",
+  "implicitDependencies": ["quantum"],
+  "// targets": "to see all targets run: nx show project quantum-e2e --web",
+  "targets": {}
+}

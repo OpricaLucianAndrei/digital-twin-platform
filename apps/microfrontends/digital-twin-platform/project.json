@@ -3,6 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
+  "root": "apps/microfrontends/digital-twin-platform",
   "sourceRoot": "apps/microfrontends/digital-twin-platform/src",
   "tags": [],
   "targets": {
@@ -71,7 +72,7 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "digital-twin-platform:build",
-        "port": 4200,
+        "port": 4206,
         "staticFilePath": "dist/apps/digital-twin-platform/browser",
         "spa": true
       }

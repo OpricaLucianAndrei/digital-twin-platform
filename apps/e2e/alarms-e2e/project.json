@@ -1,8 +1,9 @@
 {
   "name": "alarms-e2e",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/e2e/alarms-e2e",
   "projectType": "application",
-  "sourceRoot": "alarms-e2e/src",
+  "sourceRoot": "apps/e2e/alarms-e2e/src",
   "implicitDependencies": ["alarms"],
   "// targets": "to see all targets run: nx show project alarms-e2e --web",
   "targets": {}

@@ -1,8 +1,9 @@
 {
   "name": "admin-e2e",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/e2e/admin-e2e",
   "projectType": "application",
-  "sourceRoot": "admin-e2e/src",
+  "sourceRoot": "apps/e2e/admin-e2e/src",
   "implicitDependencies": ["admin"],
   "// targets": "to see all targets run: nx show project admin-e2e --web",
   "targets": {}
