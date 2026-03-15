@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "main",
+  "nxCloud": false,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -13,7 +14,6 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "69ac6896c5b1bcfa2afdd337",
   "targetDefaults": {
     "@angular/build:application": {
       "cache": true,
