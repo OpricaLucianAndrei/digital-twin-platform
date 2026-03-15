@@ -34,8 +34,8 @@ jobs:
       - name: Lint, test, build affected projects
         run: pnpm exec nx affected -t lint test build --base=origin/main~1 --head=HEAD --exclude=digital-twin-platform,digital-twin-platform-e2e
 
-      - name: Publish packages
-        run: pnpm changeset publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Publish packages
+      #   run: pnpm changeset publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
