@@ -192,12 +192,12 @@ importers:
 
   libs/core:
     dependencies:
-      '@angular/common':
-        specifier: ^21.1.0
-        version: 21.1.6(@angular/core@21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
         specifier: ^21.1.0
         version: 21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2)
+      '@digital-twin-platform-project/models':
+        specifier: workspace:*
+        version: link:../models
 
   libs/data-access:
     dependencies:
@@ -210,12 +210,12 @@ importers:
 
   libs/dist/core:
     dependencies:
-      '@angular/common':
-        specifier: ^21.1.0
-        version: 21.1.6(@angular/core@21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
         specifier: ^21.1.0
-        version: 21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2)
+        version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
+      '@digital-twin-platform-project/models':
+        specifier: workspace:*
+        version: link:../../models
       tslib:
         specifier: ^2.3.0
         version: 2.8.1

@@ -2,7 +2,14 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../dist/out-tsc",
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "paths": {
+      "@digital-twin-platform-project/models": [
+        "../models/src/index.ts",
+        "../../libs/models/src/index.ts",
+        "./libs/models/src/index.ts"
+      ]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }
