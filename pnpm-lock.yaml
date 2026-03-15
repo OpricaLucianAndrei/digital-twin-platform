@@ -280,20 +280,26 @@ importers:
   libs/quantum-data-access:
     dependencies:
       '@angular/common':
-        specifier: ^21.1.0
+        specifier: '>=21.0.0'
         version: 21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
-        specifier: ^21.1.0
+        specifier: '>=21.0.0'
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
+      '@dt-platform/quantum-models':
+        specifier: workspace:*
+        version: link:../quantum-models
+      rxjs:
+        specifier: '>=7.0.0'
+        version: 7.8.2
 
   libs/quantum-models:
     dependencies:
-      '@angular/common':
-        specifier: ^21.1.0
-        version: 21.1.6(@angular/core@21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
         specifier: ^21.1.0
         version: 21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2)
+      zod:
+        specifier: '>=3.0.0'
+        version: 4.3.6
 
   libs/ui/components/dist/ui:
     dependencies:

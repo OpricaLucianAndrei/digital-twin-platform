@@ -1,10 +1,12 @@
 {
   "name": "@dt-platform/quantum-data-access",
   "version": "0.0.1",
+  "dependencies": {
+    "@dt-platform/quantum-models": "workspace:*"
+  },
   "peerDependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/core": "^21.1.0",
-    "@dt-platform/quantum-models": "*",
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0",
     "rxjs": ">=7.0.0"
   },
   "sideEffects": false
