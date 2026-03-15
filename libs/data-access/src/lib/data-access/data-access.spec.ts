@@ -1,21 +1,29 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DataAccess } from './data-access';
+import { TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { DeviceRepository } from '../repositories/device.repository';
+import { AlarmRepository } from '../repositories/alarm.repository';
+import { TelemetryRepository } from '../repositories/telemetry.repository';
 
-describe('DataAccess', () => {
-  let component: DataAccess;
-  let fixture: ComponentFixture<DataAccess>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [DataAccess],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(DataAccess);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
+describe('Repositories', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+      ]
+    });
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('DeviceRepository dovrebbe essere creato', () => {
+    expect(TestBed.inject(DeviceRepository)).toBeTruthy();
+  });
+
+  it('AlarmRepository dovrebbe essere creato', () => {
+    expect(TestBed.inject(AlarmRepository)).toBeTruthy();
+  });
+
+  it('TelemetryRepository dovrebbe essere creato', () => {
+    expect(TestBed.inject(TelemetryRepository)).toBeTruthy();
   });
 });

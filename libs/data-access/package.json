@@ -1,9 +1,13 @@
 {
   "name": "@digital-twin-platform-project/data-access",
   "version": "0.0.1",
+  "dependencies": {
+    "@digital-twin-platform-project/models": "workspace:*"
+  },
   "peerDependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/core": "^21.1.0"
+    "@angular/common": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "rxjs": ">=7.0.0"
   },
   "sideEffects": false
 }

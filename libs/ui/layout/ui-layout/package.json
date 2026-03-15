@@ -9,8 +9,8 @@
     "iot"
   ],
   "peerDependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/core": "^21.1.0"
+    "@angular/common": "^21.2.0",
+    "@angular/core": "^21.2.0"
   },
   "sideEffects": false
 }
