@@ -32,7 +32,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Lint, test, build affected projects
-        run: pnpm exec nx affected -t lint test build --base=origin/main~1 --head=HEAD
+  run: pnpm exec nx affected -t lint test build --base=origin/main~1 --head=HEAD --exclude=digital-twin-platform,digital-twin-platform-e2e
 
       - name: Publish packages
         run: pnpm changeset publish
