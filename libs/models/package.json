@@ -1,6 +1,8 @@
 {
   "name": "@digital-twin-platform-project/models",
   "version": "0.0.1",
+  "main": "./src/index.ts",
+  "typings": "./src/index.ts",
   "peerDependencies": {
     "zod": ">=3.0.0"
   },

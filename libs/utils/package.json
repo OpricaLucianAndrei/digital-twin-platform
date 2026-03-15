@@ -1,9 +1,9 @@
 {
   "name": "@digital-twin-platform-project/utils",
   "version": "0.0.1",
+  "dependencies": {"@digital-twin-platform-project/models": "workspace:*"},
   "peerDependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/core": "^21.1.0"
+    
   },
   "sideEffects": false
 }
