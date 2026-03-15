@@ -32,7 +32,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Lint, test, build affected projects
-        run: nx affected -t lint test build
+        run: pnpm exec nx affected -t lint test build --base=origin/main~1 --head=HEAD
 
       - name: Publish packages
         run: pnpm changeset publish
