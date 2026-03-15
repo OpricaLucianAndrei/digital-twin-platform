@@ -1,6 +1,5 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 
 export interface NavItem {
   label:  string;
@@ -11,7 +10,7 @@ export interface NavItem {
 @Component({
   selector: 'lib-ui-layout-shell',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule],
   template: `
   <div class="shell">
     <aside class="shell__sidebar">
