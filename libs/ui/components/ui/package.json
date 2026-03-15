@@ -8,6 +8,17 @@
     "industrial",
     "iot"
   ],
+  "main": "./src/index.ts",
+  "typings": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@digital-twin-platform-project/models": "workspace:*"
+  },
   "peerDependencies": {
     "@angular/common": "^21.1.6",
     "@angular/core": "^21.1.6"
