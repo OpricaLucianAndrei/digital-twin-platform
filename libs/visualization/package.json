@@ -1,9 +1,12 @@
 {
   "name": "@digital-twin-platform-project/visualization",
   "version": "0.0.1",
+  "dependencies": {
+    "@digital-twin-platform-project/models": "workspace:*",
+    "@digital-twin-platform-project/utils": "workspace:*"
+  },
   "peerDependencies": {
-    "@angular/common": "^21.2.0",
-    "@angular/core": "^21.2.0"
+    "@angular/core": "^21.1.6"
   },
   "sideEffects": false
 }

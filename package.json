@@ -17,7 +17,16 @@
     "@softarc/native-federation-node": "^3.3.4",
     "es-module-shims": "^1.5.12",
     "rxjs": "~7.8.0",
-    "zod": "^4.3.6"
+    "zod": "^4.3.6",
+    "@digital-twin-platform-project/models": "workspace:*",
+    "@digital-twin-platform-project/utils": "workspace:*",
+    "@digital-twin-platform-project/core": "workspace:*",
+    "@digital-twin-platform-project/data-access": "workspace:*",
+    "@digital-twin-platform-project/visualization": "workspace:*",
+    "@digital-twin-platform-project/ui": "workspace:*",
+    "@digital-twin-platform-project/ui-layout": "workspace:*",
+    "@dt-platform/quantum-models": "workspace:*",
+    "@dt-platform/quantum-data-access": "workspace:*"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~21.2.2",

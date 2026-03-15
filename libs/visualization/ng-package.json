@@ -1,6 +1,10 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../dist/visualization",
+  "allowedNonPeerDependencies": [
+    "@digital-twin-platform-project/models",
+    "@digital-twin-platform-project/utils"
+  ],
   "lib": {
     "entryFile": "src/index.ts"
   }

@@ -1,9 +1,18 @@
 {
   "name": "@digital-twin-platform-project/utils",
   "version": "0.0.1",
-  "dependencies": {"@digital-twin-platform-project/models": "workspace:*"},
+  "main": "./src/index.ts",
+  "typings": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@digital-twin-platform-project/models": "workspace:*"
+  },
   "peerDependencies": {
-    
   },
   "sideEffects": false
 }

@@ -32,6 +32,33 @@ importers:
       '@angular/router':
         specifier: ~21.2.4
         version: 21.2.4(@angular/common@21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(@angular/platform-browser@21.2.4(@angular/animations@21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)))(@angular/common@21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)))(rxjs@7.8.2)
+      '@digital-twin-platform-project/core':
+        specifier: workspace:*
+        version: link:libs/dist/core
+      '@digital-twin-platform-project/data-access':
+        specifier: workspace:*
+        version: link:libs/dist/data-access
+      '@digital-twin-platform-project/models':
+        specifier: workspace:*
+        version: link:libs/models
+      '@digital-twin-platform-project/ui':
+        specifier: workspace:*
+        version: link:libs/ui/components/ui
+      '@digital-twin-platform-project/ui-layout':
+        specifier: workspace:*
+        version: link:libs/ui/layout/ui-layout
+      '@digital-twin-platform-project/utils':
+        specifier: workspace:*
+        version: link:libs/utils
+      '@digital-twin-platform-project/visualization':
+        specifier: workspace:*
+        version: link:libs/visualization
+      '@dt-platform/quantum-data-access':
+        specifier: workspace:*
+        version: link:libs/quantum-data-access
+      '@dt-platform/quantum-models':
+        specifier: workspace:*
+        version: link:libs/quantum-models
       '@nx/angular':
         specifier: 22.5.4
         version: 22.5.4(e4bdfb6fb057ed4184d7cc060fc892d1)
@@ -193,7 +220,7 @@ importers:
   libs/core:
     dependencies:
       '@angular/core':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
       '@digital-twin-platform-project/models':
         specifier: workspace:*
@@ -202,10 +229,10 @@ importers:
   libs/data-access:
     dependencies:
       '@angular/common':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
       '@digital-twin-platform-project/models':
         specifier: workspace:*
@@ -253,27 +280,6 @@ importers:
         specifier: '>=3.0.0'
         version: 4.3.6
 
-  libs/dist/utils:
-    dependencies:
-      '@digital-twin-platform-project/models':
-        specifier: workspace:*
-        version: link:../../models
-      tslib:
-        specifier: ^2.3.0
-        version: 2.8.1
-
-  libs/dist/visualization:
-    dependencies:
-      '@angular/common':
-        specifier: ^21.1.0
-        version: 21.1.6(@angular/core@21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2))(rxjs@7.8.2)
-      '@angular/core':
-        specifier: ^21.1.0
-        version: 21.1.6(@angular/compiler@21.1.6)(rxjs@7.8.2)
-      tslib:
-        specifier: ^2.3.0
-        version: 2.8.1
-
   libs/models:
     dependencies:
       zod:
@@ -298,7 +304,7 @@ importers:
   libs/quantum-models:
     dependencies:
       '@angular/core':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
       zod:
         specifier: '>=3.0.0'
@@ -319,10 +325,10 @@ importers:
   libs/ui/components/ui:
     dependencies:
       '@angular/common':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
 
   libs/ui/layout/dist/ui-layout:
@@ -340,10 +346,10 @@ importers:
   libs/ui/layout/ui-layout:
     dependencies:
       '@angular/common':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
 
   libs/utils:
@@ -354,12 +360,15 @@ importers:
 
   libs/visualization:
     dependencies:
-      '@angular/common':
-        specifier: ^21.2.0
-        version: 21.2.4(@angular/core@21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core':
-        specifier: ^21.2.0
+        specifier: ^21.1.6
         version: 21.2.4(@angular/compiler@21.2.4)(rxjs@7.8.2)
+      '@digital-twin-platform-project/models':
+        specifier: workspace:*
+        version: link:../models
+      '@digital-twin-platform-project/utils':
+        specifier: workspace:*
+        version: link:../utils
 
 packages:
 
